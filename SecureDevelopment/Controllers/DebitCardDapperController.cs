@@ -5,47 +5,47 @@ namespace SecureDevelopment.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DebitCardController : Controller
+    public class DebitCardDapperController : Controller
     {
-        private readonly IRepositoryCard _repositoryCard;
+        private readonly IRepositoryCardDapper _repositoryCardDapper;
 
-        public DebitCardController(IRepositoryCard repositoryCard)
+        public DebitCardDapperController(IRepositoryCardDapper repositoryCardDapper)
         {
-            _repositoryCard = repositoryCard;
+            _repositoryCardDapper = repositoryCardDapper;
         }
         
         [HttpPost("AddCard")]
         public IActionResult AddCard([FromBody] DebitCard newCard)
         {
-            var result = _repositoryCard.Create(newCard);
+            var result = _repositoryCardDapper.Create(newCard);
             return Ok(result);
         }
         
         [HttpGet("GetAllCards")]
         public IActionResult GetCards()
         {
-            var result = _repositoryCard.Read();
+            var result = _repositoryCardDapper.Read();
             return Ok(result);
         }
         
         [HttpGet("GetCardForId")]
         public IActionResult GetCardForId([FromQuery] int id)
         {
-            var result = _repositoryCard.Read(id);
+            var result = _repositoryCardDapper.Read(id);
             return Ok(result);
         }
 
         [HttpPut("UpdateCard")]
         public IActionResult UpdateCard([FromBody] DebitCard updateCard)
         {
-            var result = _repositoryCard.Update(updateCard);
+            var result = _repositoryCardDapper.Update(updateCard);
             return Ok(result);
         }
 
         [HttpDelete("DeleteCard")]
         public IActionResult DeleteCard([FromQuery] int idCard)
         {
-            var result = _repositoryCard.Delete(idCard);
+            var result = _repositoryCardDapper.Delete(idCard);
             return Ok(result);
         }
     }

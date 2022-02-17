@@ -5,47 +5,47 @@ namespace SecureDevelopment.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DebitCardController : Controller
+    public class DebitCardEfController : Controller
     {
-        private readonly IRepositoryCard _repositoryCard;
+        private readonly IRepositoryCardEf _repositoryCardEf;
 
-        public DebitCardController(IRepositoryCard repositoryCard)
+        public DebitCardEfController(IRepositoryCardEf repositoryCardEf)
         {
-            _repositoryCard = repositoryCard;
+            _repositoryCardEf = repositoryCardEf;
         }
         
         [HttpPost("AddCard")]
         public IActionResult AddCard([FromBody] DebitCard newCard)
         {
-            var result = _repositoryCard.Create(newCard);
+            var result = _repositoryCardEf.Create(newCard);
             return Ok(result);
         }
         
         [HttpGet("GetAllCards")]
         public IActionResult GetCards()
         {
-            var result = _repositoryCard.Read();
+            var result = _repositoryCardEf.Read();
             return Ok(result);
         }
         
         [HttpGet("GetCardForId")]
         public IActionResult GetCardForId([FromQuery] int id)
         {
-            var result = _repositoryCard.Read(id);
+            var result = _repositoryCardEf.Read(id);
             return Ok(result);
         }
 
         [HttpPut("UpdateCard")]
         public IActionResult UpdateCard([FromBody] DebitCard updateCard)
         {
-            var result = _repositoryCard.Update(updateCard);
+            var result = _repositoryCardEf.Update(updateCard);
             return Ok(result);
         }
 
         [HttpDelete("DeleteCard")]
         public IActionResult DeleteCard([FromQuery] int idCard)
         {
-            var result = _repositoryCard.Delete(idCard);
+            var result = _repositoryCardEf.Delete(idCard);
             return Ok(result);
         }
     }
