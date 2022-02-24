@@ -6,7 +6,7 @@ using MySql.Data.MySqlClient;
 
 namespace SecureDevelopment.Repository
 {
-    public class RepositoryCardDapperDapper : IRepositoryCardDapper
+    public class RepositoryCardDapper : IRepositoryCardDapper
     {
         public int Create(DebitCard newCard)
         {
