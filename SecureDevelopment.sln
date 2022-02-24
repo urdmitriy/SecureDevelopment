@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureDevelopment", "SecureDevelopment\SecureDevelopment.csproj", "{C696A9DB-ABEF-4F32-B3F2-C925ABC06B91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{B869AFE6-AF9E-4028-81D6-E8CF72E9912E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{C696A9DB-ABEF-4F32-B3F2-C925ABC06B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C696A9DB-ABEF-4F32-B3F2-C925ABC06B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C696A9DB-ABEF-4F32-B3F2-C925ABC06B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B869AFE6-AF9E-4028-81D6-E8CF72E9912E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B869AFE6-AF9E-4028-81D6-E8CF72E9912E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B869AFE6-AF9E-4028-81D6-E8CF72E9912E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B869AFE6-AF9E-4028-81D6-E8CF72E9912E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
